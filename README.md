@@ -1,1 +1,1 @@
-Take it easy not that hard
+Enjoy the Structure and my path to solving leetcode problems with data structure
