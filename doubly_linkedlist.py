@@ -59,9 +59,6 @@ mds.append(4)
 mds.traverse()
 
 mds.pop()
-mds.pop()
-mds.pop()
-mds.pop()
 
 mds.traverse()
 
