@@ -51,3 +51,36 @@ class Hashmap:
 
                     keys.append(self.hashmap[i][j][0])
         return keys 
+
+    def find_duplicates(self, nums:list[int]) ->list:
+        count = {}
+        for num  in nums:
+            count[num] = count.get(num, 0) + 1
+        dups = []
+
+        for num, count in count.items():
+            if count > 1:
+                dups.append(num)
+        return dups
+
+    def first_non_repeating_chars(self, string:str) -> str|None:
+        chars_count = {}
+        for c in string:
+            chars_count[c] = chars_count.get(c, 0) + 1
+
+        for char in string:
+            if char[char] == 1:
+                return char
+        return None
+
+
+
+
+
+
+
+
+
+
+
+
