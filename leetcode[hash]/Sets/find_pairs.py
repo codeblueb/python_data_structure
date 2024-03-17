@@ -5,7 +5,7 @@ def find_pairs(arr1, arr2, target):
         complement = target - num
         if complement in set1:
             pairs.append((complement, num))
-    return pairs
+    return pairs 
 
 
 print(find_pairs([1, 2, 3], [4, 5, 6], 9))
