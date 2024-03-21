@@ -35,7 +35,7 @@ class LinkedList:
         self.length += 1
         return True
 
-    def pop(self) -> object:
+    def pop(self) -> int:
         """pop a node from the end @ O(n)"""
         if self.length == 0:
             print(self.length, ' nodes to pop')
@@ -66,7 +66,7 @@ class LinkedList:
         self.length += 1
         return True
 
-    def pop_first(self) -> object:
+    def pop_first(self) -> int:
         """Pop an item from the front @ O(1)"""
         if self.length == 0:
             print(self.length, ' nodes to pop')
@@ -81,7 +81,7 @@ class LinkedList:
         self.length -= 1
         return temp
 
-    def get_value(self, index:int) -> object:
+    def get_value(self, index:int) -> int:
         """Get the node @ O(n) CAN WE DO BETTER ??!!"""
         if index < 0 or index > self.length:
             print(index, ' out of range')
@@ -121,7 +121,7 @@ class LinkedList:
         self.length += 1
         return True
 
-    def remove(self, index:int) -> object:
+    def remove(self, index:int) -> int:
         """Remove a node given a index @ O(n) CAN WE DO BTTER??!!"""
         if index < 0 or index > self.length:
             print(index, ' out of range')
@@ -171,7 +171,7 @@ class LinkedList:
                 return True
         return False
 
-    def find_kth_from_end(self, k:int) -> object:
+    def find_kth_from_end(self, k:int) -> int:
         """Find node at given index from the end @ O(n)"""
         if k < 0 or k > self.length:
             print(k, ' out of range')
