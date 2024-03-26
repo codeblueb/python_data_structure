@@ -1,6 +1,7 @@
 
 def buckets(commands:list[str]) -> str|None:
     """
+        Example 1
         The idea : simple use hashmap
     """
     buckets = {}
@@ -17,7 +18,7 @@ def buckets(commands:list[str]) -> str|None:
             if name not in buckets[name]:
                 buckets[current_bucket].add(name[1])
 
-    return mas(buckets, key=buckets.get, default=None)
+    return max(buckets, key=buckets.get, default=None)
 
 commands = [
     "goto bucketA",
@@ -32,3 +33,27 @@ commands = [
 ]
 
 print(buckets(commands))
+
+def file_buckets(commands:str) -> str|None:
+    """
+        Example 2
+        Hashmap and stack
+    """
+    buckets = {}
+    stack = []
+
+    for string in commands:
+        cmd, name = string.split()[0], string.split()[1]
+
+        if cmd == "goto":
+            stack.append(name)
+            if stack.pop() not in buckets:
+                buckets[name] = set()
+        elif cmd == "create":
+            if name not in buckets[name]:
+                buckets[stack.pop()].add(name)
+
+    return max(buckets, key=buckets.get, default=None)
+
+print(file_buckets(commands))
+
